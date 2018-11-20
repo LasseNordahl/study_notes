@@ -6,20 +6,36 @@ import Button from "@material-ui/core/Button";
 import NavigationIcon from "@material-ui/icons/Navigation";
 
 var menu_card = {
-    width: "100%",
-    height: "15vh"
+    width: '100%',
+    height: '15vh'
 };
+
+var button_margins = {
+    margin: '2vh'
+}
 
 class StudyMenu extends Component {
     render() {
         return (
             <div>
                 <Card style={menu_card}>
-                    <Button variant="extendedFab" aria-label="Delete">
-                        <NavigationIcon />
-                        Quizlet
-                    </Button>
+                    <ButtonMargin>
+                        <Button variant="extendedFab" aria-label="Delete">
+                            <NavigationIcon />
+                            Quizlet
+                        </Button>
+                    </ButtonMargin>
                 </Card>
+            </div>
+        );
+    }
+}
+
+class ButtonMargin extends Component{
+    render() {
+        return (
+            <div style={button_margins}>
+                {this.props.children}
             </div>
         );
     }
