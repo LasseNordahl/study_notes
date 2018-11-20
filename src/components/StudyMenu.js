@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "../App.css";
 
+import Videos from './Videos'
+
 import Card from "@material-ui/core/Card";
 import Button from "@material-ui/core/Button";
 import Description from "@material-ui/icons/Description";
@@ -54,15 +56,16 @@ class StudyMenu extends Component {
         super(props)
 
         this.state = {
-            youtube_videos: [1, 2, 3]
+            youtube_videos: []
         }
 
         this.load_youtube_videos = this.load_youtube_videos.bind(this)
+        this.render_videos = this.render_videos.bind(this)
     }
 
     componentDidMount() {
         let component = this
-        fetch(config.default.API + 'getVideos?keyword=LasseNordahl')
+        fetch(config.default.API + 'getVideos?keyword=BinarySearchTree&keyword=Hashmap')
         .then(function(response) {
             return response.json();
         })
@@ -77,6 +80,20 @@ class StudyMenu extends Component {
     load_youtube_videos() {
         console.log('loading youtube videos')
         console.log(process.env.REACT_APP_STAGE)
+        console.log(this.state.youtube_videos)
+    }
+
+    render_videos() {
+        console.log(this.state.youtube_videos)
+        if (this.state.youtube_videos.length > 0) {
+            console.log('rendering video')
+
+            return <Videos videoData={this.state.youtube_videos}></Videos>
+        } else {
+            console.log('rendering null')
+
+            return null
+        }
     }
 
     render() {
@@ -96,7 +113,7 @@ class StudyMenu extends Component {
                         ))}
                     </ButtonMargin>
                 </Card>
-                <pre>{JSON.stringify(this.state.youtube_videos)}</pre>
+                {this.render_videos()}
             </div>
         );
     }
