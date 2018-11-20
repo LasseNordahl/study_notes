@@ -3,6 +3,7 @@ import './App.css';
 
 import Split from './components/Split.js'
 import TextEditor from './components/TextEditor.js'
+import StudyView from './components/StudyView.js'
 
 var middle_split = {
   backgroundColor: 'white',
@@ -23,7 +24,9 @@ class App extends Component {
         <Split style={middle_split}>
           <TextEditor></TextEditor>
         </Split>
-        <Split style={middle_split}></Split>
+        <Split style={middle_split}>
+          <StudyView></StudyView>
+        </Split>
       </div>
     );
   }
