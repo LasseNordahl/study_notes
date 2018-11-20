@@ -6,30 +6,30 @@ import TextEditor from './components/TextEditor.js'
 import StudyView from './components/StudyView.js'
 
 var middle_split = {
-  backgroundColor: 'white',
-  width: '100%'
+    backgroundColor: 'white',
+    width: '100%'
 }
 
 var col_alignment = {
-  height: '100%',
-  width: '100%',
-  display: 'flex',
-  flexDirection: 'row'
+    height: '100%',
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'row'
 }
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App" style={col_alignment}>
-        <Split style={middle_split}>
-          <TextEditor></TextEditor>
-        </Split>
-        <Split style={middle_split}>
-          <StudyView></StudyView>
-        </Split>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="App" style={col_alignment}>
+                <Split style={middle_split}>
+                    <TextEditor></TextEditor>
+                </Split>
+                <Split style={middle_split}>
+                    <StudyView></StudyView>
+                </Split>
+            </div>
+        );
+    }
 }
 
 export default App;
