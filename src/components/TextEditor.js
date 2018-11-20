@@ -27,7 +27,6 @@ class TextEditor extends Component {
     return (
       <div>
         <ReactQuill value={this.state.text} onChange={this.handle_text_change} className="quill"></ReactQuill>
-        <button onClick={this.print_quill_value}></button>
       </div>
     );
   }

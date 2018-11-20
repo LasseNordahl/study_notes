@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../App.css';
 
 var block_split = {
-  border: '5px solid red',
   width: '100%',
   height: '100%'
 }
