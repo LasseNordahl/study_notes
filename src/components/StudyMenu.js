@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import "../App.css";
 
+import Split from './Split.js'
+
 import Card from "@material-ui/core/Card";
 import Button from "@material-ui/core/Button";
-import NavigationIcon from "@material-ui/icons/Navigation";
+import Description from "@material-ui/icons/Description";
+import PlayArrow from "@material-ui/icons/PlayArrow";
 
 var menu_card = {
     width: '100%',
@@ -11,8 +14,30 @@ var menu_card = {
 };
 
 var button_margins = {
-    margin: '2vh'
+    margin: '3vh'
 }
+
+var menu_button = {
+    marginLeft: '1vh',
+    marginRight: '1vh'
+}
+
+var button_config = {
+    'Quizlet' : {
+        name: 'Quizlet',
+        color: 'primary',
+        icon: <Description/>,
+        type: 'extendedFab',
+    },
+    'Youtube' : {
+        name: 'Youtube',
+        color: 'secondary',
+        icon: <PlayArrow/>,
+        type: 'extendedFab'
+    }
+}
+
+var test_buttons = ['Youtube', 'Quizlet']
 
 class StudyMenu extends Component {
     render() {
@@ -20,10 +45,12 @@ class StudyMenu extends Component {
             <div>
                 <Card style={menu_card}>
                     <ButtonMargin>
-                        <Button variant="extendedFab" aria-label="Delete">
-                            <NavigationIcon />
-                            Quizlet
-                        </Button>
+                        {test_buttons.map(button => (
+                            <Button style={menu_button} color={button_config[button].color} variant={button_config[button].type}>
+                                {button_config[button].icon}
+                                {button}
+                            </Button>
+                        ))}
                     </ButtonMargin>
                 </Card>
             </div>
