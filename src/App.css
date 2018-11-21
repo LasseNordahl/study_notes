@@ -45,6 +45,20 @@
   min-height: 88.7vh
 }
 
-.viewMargin {
+.view-margin {
   margin: 4vh
+}
+
+.view-margin-top {
+  margin-top: 4vh
+}
+
+.youtube-card h3 {
+  text-align: left;
+  margin: 1em
+}
+
+.youtube-card p {
+  text-align: left;
+  margin-left: 1em
 }
