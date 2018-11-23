@@ -7,8 +7,6 @@ var card_margin = {
     width: '100%',
 };
 
-var test_videos = [1, 2, 3]
-
 class Videos extends Component {
     render() {
         return (

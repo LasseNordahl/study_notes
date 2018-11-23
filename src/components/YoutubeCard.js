@@ -15,7 +15,7 @@ class YoutubeCard extends Component {
         }
 
         return (
-            <Card className="view-margin-top youtube-card">
+            <Card className="view-margin-top youtube-card" style={{height: '31.7vh'}}>
                 <h3>{video.snippet.title}</h3>
                 <p>{video.snippet.channelTitle}</p>
                 <YouTube style={{margin: '2vh'}} opts={options} videoId={this.props.video.id.videoId}></YouTube>

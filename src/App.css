@@ -38,27 +38,33 @@
 }
 
 .quill .ql-container {
-  background: white
+  background: white;
 }
 
 .quill .ql-editor {
-  min-height: 88.7vh
+  min-height: 88.7vh;
 }
 
 .view-margin {
-  margin: 4vh
+  margin: 4vh;
 }
 
 .view-margin-top {
-  margin-top: 4vh
+  margin-top: 4vh;
 }
 
 .youtube-card h3 {
   text-align: left;
-  margin: 1em
+  margin: 1em;
 }
 
 .youtube-card p {
   text-align: left;
-  margin-left: 1em
+  margin-left: 1em;
+}
+
+.logo-icon {
+  width: 35px;
+  height: 40px;
+  margin: 10px
 }

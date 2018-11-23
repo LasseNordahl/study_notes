@@ -11,9 +11,6 @@ import Settings from "@material-ui/icons/Settings";
 
 const config = require('../config.js')
 
-console.log(config.default.API)
-
-
 var menu_card = {
     width: '100%',
     // height: '15vh'
