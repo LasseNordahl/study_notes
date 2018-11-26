@@ -68,3 +68,8 @@
   height: 40px;
   margin: 10px
 }
+
+.google-login-button {
+  position: absolute;
+  right: 1vh;
+}
